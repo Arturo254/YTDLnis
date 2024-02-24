@@ -11,7 +11,7 @@
 
 <div align="center">
 
-[![Descarga en Github](https://custom-icon-badges.herokuapp.com/badge/Download-blue?style=for-the-badge&logo=download&logoColor=white)](https://github.com/deniscerri/ytdlnis/releases/latest)
+[![Descarga en Github](https://custom-icon-badges.herokuapp.com/badge/Download-blue?style=for-the-badge&logo=download&logoColor=white)](https://github.com/Arturo254/YTDLnis/releases/tag/YTDLnis)
 
 ![CI](https://github.com/deniscerri/ytdlnis/actions/workflows/android.yml/badge.svg?branch=main&event=pull)
 [![Vista previa de la versión](https://img.shields.io/github/release/deniscerri/ytdlnis.svg?maxAge=3600&include_prereleases&label=vista%20previa)](https://github.com/Arturo254/YTDLnis/releases)
