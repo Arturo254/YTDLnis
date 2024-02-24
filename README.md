@@ -12,16 +12,14 @@
 <div align="center">
 
 [![Descarga en Github](https://custom-icon-badges.herokuapp.com/badge/Download-blue?style=for-the-badge&logo=download&logoColor=white)](https://github.com/deniscerri/ytdlnis/releases/latest)
-[![IzzyOnDroid Repo](https://custom-icon-badges.herokuapp.com/badge/Repo%20de%20IzzyOnDroid-red?style=for-the-badge&logo=download&logoColor=white)](https://android.izzysoft.de/repo/apk/com.deniscerri.ytdl)
-[![UpToDown](https://custom-icon-badges.herokuapp.com/badge/UpToDown-green?style=for-the-badge&logo=download&logoColor=white)](https://ytdlnis.en.uptodown.com/android/download)
 
 ![CI](https://github.com/deniscerri/ytdlnis/actions/workflows/android.yml/badge.svg?branch=main&event=pull)
-[![Vista previa de la versión](https://img.shields.io/github/release/deniscerri/ytdlnis.svg?maxAge=3600&include_prereleases&label=vista%20previa)](https://github.com/deniscerri/ytdlnis/releases)
-[![descargas](https://img.shields.io/github/downloads/deniscerri/ytdlnis/total?style=flat-square)](https://github.com/deniscerri/ytdlnis/releases)
+[![Vista previa de la versión](https://img.shields.io/github/release/deniscerri/ytdlnis.svg?maxAge=3600&include_prereleases&label=vista%20previa)](https://github.com/Arturo254/YTDLnis/releases)
+[![descargas](https://img.shields.io/github/downloads/deniscerri/ytdlnis/total?style=flat-square)](https://github.com/Arturo254/YTDLnis/releases)
 [![Estado de traducción](https://hosted.weblate.org/widgets/ytdlnis/-/svg-badge.svg)](https://hosted.weblate.org/engage/ytdlnis/?utm_source=widget)
 [![comunidad](https://img.shields.io/badge/Discord-YTDLnis-blueviolet?style=flat-square&logo=discord)](https://arturo-cervantes.netlify.app/)
-[![comunidad](https://img.shields.io/badge/Telegram-YTDLnis-blue?style=flat-square&logo=telegram)](https://t.me/ytdlnis)
-[![comunidad](https://img.shields.io/badge/Telegram-Actualizaciones-rojo?style=flat-square&logo=telegram)](https://t.me/ytdlnisupdates)
+[![comunidad](https://img.shields.io/badge/Telegram-YTDLnis-blue?style=flat-square&logo=telegram)](https://t.me/ArturoNomas7271)
+[![comunidad](https://img.shields.io/badge/Telegram-Actualizaciones-rojo?style=flat-square&logo=telegram)](https://t.me/ArturoNomas7271)
 
 ### Los enlaces anteriores son las únicas fuentes confiables de YTDLnis. Todo lo demás no está relacionado conmigo.
 
