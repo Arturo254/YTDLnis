@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/appearance">
+        <ListPreference
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:defaultValue=""
+            android:icon="@drawable/baseline_translate_24"
+            app:key="app_language"
+            app:useSimpleSummaryProvider="true"
+            app:summary=""
+            app:title="@string/language" />
+
+        <ListPreference
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_values"
+            android:icon="@drawable/baseline_format_paint_24"
+            app:defaultValue="System"
+            app:key="ytdlnis_theme"
+            app:summary="@string/defaultValue"
+            app:title="@string/Theme" />
+
+        <ListPreference
+            android:entries="@array/accents"
+            android:entryValues="@array/accents_values"
+            android:icon="@drawable/baseline_color_lens_24"
+            app:defaultValue="blue"
+            app:key="theme_accent"
+            app:summary="Blue"
+            app:title="@string/accents" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/baseline_invert_colors_24"
+            android:key="high_contrast"
+            app:summary="@string/pure_theme_summary"
+            app:title="@string/high_contrast" />
+
+
+        <MultiSelectListPreference
+            app:icon="@drawable/baseline_hide_image_24"
+            app:dialogTitle="@string/hide_thumbnails"
+            app:entries="@array/hide_thumbnail"
+            app:entryValues="@array/hide_thumbnail_values"
+            app:key="hide_thumbnails"
+            app:title="@string/hide_thumbnails" />
+
+        <MultiSelectListPreference
+            app:icon="@drawable/ic_card"
+            android:dialogTitle="@string/modify_download_card"
+            android:entries="@array/modify_download_card"
+            android:entryValues="@array/modify_download_card_values"
+            android:defaultValue="@array/modify_download_card_values"
+            app:key="modify_download_card"
+            app:title="@string/modify_download_card" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/misc">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/baseline_recommend_24"
+            android:key="home_recommendations"
+            app:summary="@string/video_recommendations_summary"
+            app:title="@string/video_recommendations" />
+
+        <EditTextPreference
+            android:icon="@drawable/ic_key"
+            app:key="api_key"
+            android:summary="@string/api_key_summary"
+            app:title="@string/api_key" />
+
+
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/countries"
+            android:entryValues="@array/countries_values"
+            app:icon="@drawable/ic_language"
+            app:useSimpleSummaryProvider="true"
+            app:dependency="home_recommendations"
+            app:key="locale"
+            app:title="@string/preferred_locale" />
+
+        <ListPreference
+            android:defaultValue="Home"
+            android:entries="@array/start_destination"
+            android:entryValues="@array/start_destination_values"
+            app:icon="@drawable/baseline_add_to_home_screen_24"
+            app:useSimpleSummaryProvider="true"
+            app:key="start_destination"
+            app:title="@string/preferred_home_screen" />
+
+        <ListPreference
+            android:defaultValue="ytsearch"
+            android:entries="@array/search_engines"
+            android:entryValues="@array/search_engines_values"
+            android:icon="@drawable/baseline_manage_search_24"
+            app:key="search_engine"
+            app:summary="@string/preferred_search_engine_summary"
+            app:title="@string/preferred_search_engine" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/ic_search_accent"
+            android:key="search_suggestions"
+            app:summary="@string/search_suggestions_summary"
+            app:title="@string/search_suggestions" />
+
+        <MultiSelectListPreference
+            android:icon="@drawable/baseline_swipe_24"
+            android:key="swipe_gesture"
+            android:entries="@array/swipe_gestures"
+            android:entryValues="@array/swipe_gestures_values"
+            android:defaultValue="@array/swipe_gestures_values"
+            app:summary="@string/swipe_gestures_summary"
+            app:title="@string/swipe_gestures" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/baseline_share2_24"
+            android:key="show_terminal"
+            app:title="@string/show_terminal" />
+
+
+        <Preference
+            app:icon="@drawable/ic_battery"
+            app:key="ignore_battery"
+            app:title="@string/ignore_battery_optimization" />
+    </PreferenceCategory>
+</PreferenceScreen>

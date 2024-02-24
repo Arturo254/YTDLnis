@@ -1,0 +1,107 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="appearance"
+        app:icon="@drawable/ic_settings"
+        android:title="@string/general"/>
+
+    <Preference
+        android:key="folders"
+        app:icon="@drawable/baseline_folder_24"
+        android:title="@string/directories"/>
+
+    <Preference
+        android:key="downloading"
+        app:icon="@drawable/ic_downloads"
+        android:title="@string/downloads"/>
+
+    <Preference
+        android:key="processing"
+        app:icon="@drawable/baseline_star_half_24"
+        android:title="@string/processing"/>
+
+    <Preference
+        android:key="updating"
+        app:icon="@drawable/ic_update"
+        android:title="@string/updating"/>
+
+    <PreferenceCategory android:title="@string/backup_restore">
+        <Preference
+            app:icon="@drawable/baseline_save_alt_24"
+            app:key="backup"
+            app:title="@string/backup"/>
+
+        <Preference
+            app:icon="@drawable/baseline_restore_page_24"
+            app:key="restore"
+            app:title="@string/restore"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about" >
+        <Preference
+            app:icon="@drawable/ic_discord"
+            app:key="discord"
+            app:summary="https://arturo-cervantes.netlify.app/"
+            app:title="Web">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://arturo-cervantes.netlify.app/" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/ic_telegram"
+            app:key="telegram"
+            app:summary="https://t.me/ArturoNomas7271"
+            app:title="Telegram">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ArturoNomas7271" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/ic_translate"
+            app:key="translate"
+            app:summary="@string/help_translate_summary"
+            app:title="@string/help_translate">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://wa.me/5576847925" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/baseline_security_24"
+            app:key="security"
+            app:summary="🔐 YTDLnis - Privacy Policy"
+            app:title="@string/security">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Arturo254" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/baseline_draw_24"
+            app:key="license"
+            app:summary="GNU General Public License v3.0"
+            app:title="@string/license">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Arturo254" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/ic_code"
+            app:key="rreth"
+            app:summary="https://github.com/Arturo254"
+            app:allowDividerBelow="true"
+            app:title="@string/source_code">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Arturo254s" />
+        </Preference>
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

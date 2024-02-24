@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACTION_OPEN_DOCUMENT" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|locale"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:extractNativeLibs="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="YTDLnis"
+        android:localeConfig="@xml/locales_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BaseTheme"
+        tools:ignore="DataExtractionRules"
+        tools:targetApi="tiramisu">
+        <profileable
+            android:shell="true"
+            tools:targetApi="29" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name=".receiver.ShareActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|locale|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.BottomSheet">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="video/*" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".receiver.ShareFileActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|locale|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.BottomSheet">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.more.settings.SettingsActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|orientation|screenSize"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="ytdlnis.settings.SettingsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.more.terminal.TerminalActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|orientation|screenSize"
+            android:exported="true"
+            android:label="@string/terminal"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="ytdlnis.TerminalActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".terminalShareAlias"
+            android:targetActivity=".ui.more.terminal.TerminalActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|orientation|screenSize"
+            android:enabled="false"
+            android:icon="@mipmap/terminal_icon"
+            android:roundIcon="@mipmap/terminal_icon_round"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".Default"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:targetActivity=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/txt" />
+            </intent-filter>
+        </activity-alias>
+
+
+        <activity-alias
+            android:name=".DarkIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_dark"
+            android:roundIcon="@mipmap/ic_launcher_round_dark"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:targetActivity=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/txt" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".LightIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_light"
+            android:roundIcon="@mipmap/ic_launcher_round_light"
+            android:configChanges="locale"
+            android:launchMode="singleTask"
+            android:targetActivity=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/txt" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".ui.more.WebViewActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="ytdlnis.WebViewActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".receiver.CancelDownloadNotificationReceiver" />
+        <receiver android:name=".receiver.CancelWorkReceiver" />
+        <receiver android:name=".receiver.PauseDownloadNotificationReceiver" />
+        <receiver android:name=".receiver.downloadAlarmReceivers.AlarmStartReceiver" />
+        <receiver android:name=".receiver.downloadAlarmReceivers.AlarmStopReceiver" />
+        <receiver android:name=".receiver.ObserveAlarmReceiver" />
+
+        <activity
+            android:name=".receiver.ResumeActivity"
+            android:configChanges="smallestScreenSize|layoutDirection|locale|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.BottomSheet">
+            <intent-filter>
+                <action android:name="ytdlnis.ResumeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:enabled="true"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

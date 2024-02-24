@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:defaultValue=""
+        app:icon="@drawable/ic_music_downloaded"
+        app:key="music_path"
+        app:title="@string/music_directory" />
+
+    <Preference
+        android:defaultValue=""
+        app:icon="@drawable/ic_video_downloaded"
+        app:key="video_path"
+        app:title="@string/video_directory" />
+
+    <Preference
+        android:defaultValue=""
+        app:icon="@drawable/ic_terminal"
+        app:key="command_path"
+        app:title="@string/command_directory" />
+
+    <Preference
+        app:icon="@drawable/ic_access_folder"
+        app:key="access_all_files"
+        android:summary="@string/access_all_directories_summary"
+        app:title="@string/access_all_directories" />
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/preferece_material_switch"
+        app:defaultValue="true"
+        app:icon="@drawable/if_file_rename"
+        android:enabled="false"
+        app:key="cache_downloads"
+        app:summary="@string/cache_first_summary"
+        app:title="@string/cache_first" />
+
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/preferece_material_switch"
+        app:defaultValue="false"
+        android:icon="@drawable/baseline_save_24"
+        android:key="keep_cache"
+        app:summary="@string/keep_cache_summary"
+        app:title="@string/keep_cache" />
+
+
+
+    <Preference
+        android:icon="@drawable/ic_textformat"
+        app:key="file_name_template"
+        app:useSimpleSummaryProvider="true"
+        app:defaultValue="%(uploader)s - %(title)s"
+        app:title="@string/file_name_template" />
+
+    <Preference
+        android:icon="@drawable/ic_textformat"
+        app:key="file_name_template_audio"
+        app:useSimpleSummaryProvider="true"
+        app:defaultValue="%(uploader)s - %(title)s"
+        app:title="@string/file_name_template" />
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/preferece_material_switch"
+        app:defaultValue="false"
+        app:icon="@drawable/if_file_rename"
+        app:key="restrict_filenames"
+        app:summary="@string/restrict_filenames_summary"
+        app:title="@string/restrict_filenames" />
+
+    <Preference
+        app:icon="@drawable/baseline_drive_file_move_24"
+        app:key="move_cache"
+        android:summary="@string/move_temporary_files_summary"
+        app:title="@string/move_temporary_files" />
+
+    <Preference
+        app:icon="@drawable/ic_folder_delete"
+        app:key="clear_cache"
+        android:summary="@string/clear_temporary_files_summary"
+        app:title="@string/clear_temporary_files" />
+
+</PreferenceScreen>
